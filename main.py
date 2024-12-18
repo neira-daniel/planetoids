@@ -16,6 +16,8 @@ def main():
                 return
         # fill is a Surface method
         screen.fill("black")
+        # update player position
+        player.update(dt)
         # draw player
         player.draw(screen)
         # update the full display Surface
