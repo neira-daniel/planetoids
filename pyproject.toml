@@ -1,0 +1,9 @@
+[project]
+name = "planetoids"
+version = "0.1.0"
+description = "guided project from boot.dev"
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "pygame==2.6.1",
+]
