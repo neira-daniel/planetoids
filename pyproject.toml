@@ -1,7 +1,7 @@
 [project]
 name = "planetoids"
 version = "0.1.0"
-description = "guided project from boot.dev"
+description = "Guided project from boot.dev. Instructor: Sarah Schulte"
 readme = "README.md"
 requires-python = ">=3.12.8"
 dependencies = [
