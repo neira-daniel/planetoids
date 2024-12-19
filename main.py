@@ -45,7 +45,7 @@ def main():
             for bullet in shots:
                 if bullet.is_colliding_with(asteroid):
                     bullet.kill()
-                    asteroid.kill()
+                    asteroid.split()
                     break
         # update the full display Surface
         pygame.display.flip()
