@@ -1,3 +1,4 @@
+import sys
 import pygame
 from asteroidfield import AsteroidField
 from player import Player
@@ -34,6 +35,10 @@ def main():
         # draw drawable Player's instances
         for thing in drawable:
             thing.draw(screen)
+        for thing in asteroids:
+            if thing.is_colliding_with(player):
+                print("Game over!")
+                sys.exit(0)
         # update the full display Surface
         pygame.display.flip()
         # set max FPS to 60 Hz
