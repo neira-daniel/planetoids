@@ -38,10 +38,15 @@ def main():
         # draw drawable Player's instances
         for thing in drawable:
             thing.draw(screen)
-        for thing in asteroids:
-            if thing.is_colliding_with(player):
+        for asteroid in asteroids:
+            if asteroid.is_colliding_with(player):
                 print("Game over!")
                 sys.exit(0)
+            for bullet in shots:
+                if bullet.is_colliding_with(asteroid):
+                    bullet.kill()
+                    asteroid.kill()
+                    break
         # update the full display Surface
         pygame.display.flip()
         # set max FPS to 60 Hz
